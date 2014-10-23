@@ -4,11 +4,17 @@
 
 Lists your module's dependencies with URLs and licenses.
 
+
+Running the following on your module root: 
+
+
 ```
 dependency-lister
+```
 
-### prints the following to stdout
+Will print info like this:
 
+```
 dependencies (6)
 ------------
   as-number (1.0.0) MIT
