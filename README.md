@@ -71,8 +71,8 @@ e.g.
 var pkg = require('fs').readFileSync(__dirname+'/package.json', 'utf8')
 pkg = JSON.parse(pkg)
 
-list(pkg, { dependencies: true, devDependencies: false }).then(function(result) {
-    reuslt.dependencies.forEach(function(d) {
+list(pkg, { dependencies: false, devDependencies: true }).then(function(result) {
+    reuslt.devDependencies.forEach(function(d) {
         console.log(d.name, d.version)
         console.log(d.info) //the stats returned from npm registry
     })
