@@ -10,6 +10,7 @@
     "url": "https://github.com/mattdesl"
   },
   "dependencies": {
+    "as-number": "^1.0.0",
     "bluebird": "^2.3.6",
     "minstache": "^1.2.0",
     "npm-stats": "^1.0.0",
@@ -35,6 +36,9 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/mattdesl/dependency-lister.git"
+  },
+  "bin": {
+    "dependency-lister": "./bin/cmd.js"
   },
   "homepage": "https://github.com/mattdesl/dependency-lister",
   "bugs": {
