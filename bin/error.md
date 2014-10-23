@@ -1,0 +1,2 @@
+{{name}}
+     [not in registry]
