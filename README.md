@@ -2,6 +2,8 @@
 
 [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 
+```npm install -g dependency-lister```
+
 Lists your module's dependencies with URLs and licenses.
 
 
@@ -40,8 +42,6 @@ dependencies (6)
 ## Usage
 
 [![NPM](https://nodei.co/npm/dependency-lister.png)](https://nodei.co/npm/dependency-lister/)
-
-```npm install -g dependency-lister```
 
 ```sh
 Usage:
