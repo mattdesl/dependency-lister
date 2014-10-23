@@ -18,7 +18,7 @@ Will print info like this:
 
 ```
 dependencies (6)
-------------
+----------------
   as-number (1.0.0) MIT
      https://github.com/mattdesl/as-number
      typeof number, or use a default
