@@ -22,10 +22,11 @@ function print(d) {
 }
 
 function display(packages) {
-    Object.keys(packages).forEach(function(k) {
+    Object.keys(packages).forEach(function(k, i, self) {
         var dash = Array(k.length+1).join('-')
         console.log(k, '('+k.length+')\n' + dash)
         packages[k].forEach(print)
+        if (i!==self.length-1) console.log()
     })
     
 }

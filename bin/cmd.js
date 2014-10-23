@@ -10,6 +10,11 @@ var argv = require('yargs')
         .alias('D', 'devDependencies')
         .alias('o', 'optionalDependencies')
         .alias('p', 'peerDependencies')
+        .describe('d', 'show dependencies')
+        .describe('D', 'show devDependencies')
+        .describe('p', 'show peerDependencies')
+        .describe('o', 'show optionalDependencies')
+        .usage('Usage:\ndependency-lister [path/to/package.json]')
         .help('h', 'show help message')
         .argv
 
@@ -26,8 +31,6 @@ else
         peerDependencies: !!argv.p,
         devDependencies: !!argv.D
     }
-
-
 
 var input = argv._[0] || path.join(process.cwd(), 'package.json')
 console.log(input)
