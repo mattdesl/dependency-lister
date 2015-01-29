@@ -1,6 +1,6 @@
 {
   "name": "dependency-lister",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "lists your dependencies in a nice way",
   "main": "index.js",
   "license": "MIT",
