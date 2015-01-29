@@ -53,12 +53,17 @@ Options:
   -p, --peerDependencies      show peerDependencies          
   -o, --optionalDependencies  show optionalDependencies      
   -t, --truncate              truncate description to N chars
+  -c, --compact               don't show description
   -h, --help                  show help message       
 ```
 
 Defaults to the current directory's `package.json`. If no arguments are given, all dependencies are listed. Otherwise, it only lists the specified dependendency types.
 
 Truncate defaults to 60 chars; if you do `-t=false` it will not truncate at all. 
+
+Example:
+
+```dependency-lister --dependencies --compact > deps.txt```
 
 ## API
 

@@ -11,11 +11,13 @@ var argv = require('yargs')
         .alias('o', 'optionalDependencies')
         .alias('p', 'peerDependencies')
         .alias('t', 'truncate')
+        .alias('c', 'compact')
         .describe('d', 'show dependencies')
         .describe('D', 'show devDependencies')
         .describe('p', 'show peerDependencies')
         .describe('o', 'show optionalDependencies')
         .describe('t', 'truncate description to N chars')
+        .describe('c', 'compact output, no description')
         .usage('Usage:\ndependency-lister [path/to/package.json]')
         .help('h', 'show help message')
         .argv
@@ -28,14 +30,15 @@ if (argv.t === 'false')
 
 var args
 if (!argv.d && !argv.D && !argv.p && !argv.o)
-    args = { truncate: argv.t }
+    args = { truncate: argv.t, compact: argv.c }
 else
     args = {
         dependencies: !!argv.d,
         optionalDependencies: !!argv.o,
         peerDependencies: !!argv.p,
         devDependencies: !!argv.D,
-        truncate: argv.t
+        truncate: argv.t,
+        compact: argv.c
     }
 
 var input = argv._[0] || path.join(process.cwd(), 'package.json')
