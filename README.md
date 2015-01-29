@@ -43,7 +43,7 @@ dependencies (6)
 
 [![NPM](https://nodei.co/npm/dependency-lister.png)](https://nodei.co/npm/dependency-lister/)
 
-```sh
+```
 Usage:
 dependency-lister [path/to/package.json]
 
