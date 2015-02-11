@@ -13,15 +13,28 @@ function print(opt, d) {
     }
 
     d.version = d.version.replace(/^[\~\^]/g, '')
-    d.url = d.info[0].homepage && d.info[0].homepage
-    if (!d.url)
-        d.url = '[missing url]'
-    d.description = d.info[0].description || '[missing description]'
+    d.url = d.info[0].homepage
+    d.description = d.info[0].description 
+    d.license = d.info[0].license
+
+    var latest = d.info[0]['dist-tags']
+    if (latest && d.info[0].versions)
+        latest = d.info[0].versions[latest]
+    if (latest) {
+        if (!d.license) 
+            d.license = latest.license
+        if (!d.description)
+            d.description = latest.description
+        if (!d.url)
+            d.url = latest.homepage
+    }
+
+    d.license = d.license || '[missing license]'
+    d.description = d.description || '[missing description]'
+    d.url = d.url || '[missing url]'
     if (opt.truncate !== false && (d.description.length > number(opt.truncate, 60)))
         d.description = d.description.substring(0, 80)+'...'
-
-    d.license = d.info[0].license || '[missing license]'
-
+    
     console.log('  '+template(opt.compact ? compact : txt, d))
 }
 

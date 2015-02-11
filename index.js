@@ -13,7 +13,7 @@ function list(pkg, type, opt) {
             version: dep[k]
         }
     })
-    
+
     return Promise.map(result, function(p) {
         return stats(p.name)
             .then(function(info) {

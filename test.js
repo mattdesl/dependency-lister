@@ -3,9 +3,9 @@ var display = require('./bin/display')
 var pkg = require('./package.json')
 
 var defaultArgs = {
-    dependencies: true,
+    dependencies: false,
     optionalDependencies: false,
     peerDependencies: false,
-    devDependencies: false
+    devDependencies: true
 }
 list(pkg, defaultArgs).then(display)
